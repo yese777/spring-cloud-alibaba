@@ -1,7 +1,14 @@
+#spring:
+#  cloud:
+#    nacos:
+#      # Nacos 作为注册中心的配置项，对应 NacosDiscoveryProperties 配置类
+#      discovery:
+#        server-addr: 127.0.0.1:8848 # Nacos 服务器地址
+#        namespace: dev # Nacos 命名空间 dev 的编号
+
 spring:
-  cloud:
-    nacos:
-      # Nacos 作为注册中心的配置项，对应 NacosDiscoveryProperties 配置类
-      discovery:
-        server-addr: 127.0.0.1:8848 # Nacos 服务器地址
-        namespace: dev # Nacos 命名空间 dev 的编号
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cloud-alibaba?useUnicode=true&useSSL=false&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
