@@ -4,13 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-/**
- * TODO
- *
- * @author 张庆福
- * @date 2021/4/12
- */
+
 @SpringBootApplication(scanBasePackages = "com.example")
+// 开启扫描Spring Cloud Feign客户端的功能
 @EnableFeignClients(basePackages = {"com.example"})
 public class ConsumerApplication {
 

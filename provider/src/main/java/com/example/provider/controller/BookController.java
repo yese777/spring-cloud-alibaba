@@ -80,7 +80,7 @@ public class BookController {
      */
     @ApiOperation("根据id修改数据")
     @PutMapping
-    public R<?> update(@RequestBody Book book) {
+    public R<Long> update(@RequestBody Book book) {
         boolean flag = bookService.updateById(book);
         if (flag) {
             return R.ok(book.getId());
