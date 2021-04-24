@@ -34,6 +34,10 @@
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR8</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.5.RELEASE</spring.cloud.alibaba.version>
+
+
+        <app.version>1.0-SNAPSHOT</app.version>
+
     </properties>
 
     <!--
@@ -64,17 +68,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!--mybatis-plus:https://baomidou.com/ -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <!--knife4j:https://doc.xiaominfo.com/knife4j/ -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
             </dependency>
+            <!--hutool工具包:https://www.hutool.cn/ -->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
@@ -108,13 +114,22 @@
                 <version>${commons-io.version}</version>
             </dependency>
             <!--处理excel-->
-            <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
+            <!-- https://github.com/alibaba/easyexcel/ -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
                 <version>${easyexcel.version}</version>
             </dependency>
 
+
+
+
+            <!--common模块-->
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>cloud-common</artifactId>
+                <version>${app.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

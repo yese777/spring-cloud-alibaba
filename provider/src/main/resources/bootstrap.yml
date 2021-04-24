@@ -1,0 +1,26 @@
+spring:
+  application:
+    # 应用名称
+    name: demo-provider
+  cloud:
+    nacos:
+      # Nacos 作为注册中心的配置项，对应 NacosDiscoveryProperties 配置类
+      discovery:
+        # Nacos 服务注册地址
+        server-addr: 127.0.0.1:8848
+        # 注册到 Nacos 的服务名。默认值为 ${spring.application.name}。
+        service: ${spring.application.name}
+        namespace: dev
+      # Nacos 作为配置中心
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+        # 配置文件格式
+        file-extension: yml
+        namespace: dev
+
+
+
+#        # 共享配置
+#        shared-configs:
+#          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
